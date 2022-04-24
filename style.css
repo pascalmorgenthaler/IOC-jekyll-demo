@@ -9,3 +9,117 @@ footer {
     padding: 5%;
     background-color: lightblue;
 }
+
+.card {
+    padding: 5rem;
+    border: 2px solid;
+    border-radius: 1rem;
+    max-width: 20%;
+    display: inline-block;
+}
+
+  
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  
+  
+  
+  /* utility classes */
+  
+  .padded {padding: 5%;}
+  .padded-1 {padding: 1rem;}
+  
+  .bg-featured { background-color: #341f97}
+  .bg-light { background-color: white}
+  
+  .light-text {color: white;}
+  
+  .bg-image {
+    background-color: lightblue;
+    background-image: url('https://source.unsplash.com/RTU9JXYhqXQ');
+    background-size: cover;
+    padding: 1rem;
+    padding-bottom: 40%;
+    background-position: center;
+    color: white;
+  }
+  
+  /* universal styles */
+  .heading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+  }
+  
+  p {
+    line-height: 1.2;
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  a {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  /* Card Styles */
+  
+  .card {
+    background-color: white;
+    padding: 0; 
+    border: 10px solid #341f97;
+  }
+  
+  .bg-image span {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .post-info {
+    padding: 1rem;
+  }
+  
+  .date {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  
+  @media(max-width: 36em) { 
+    
+   .horizontal-scroll {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+    
+     .mob-padded-0 {
+     padding: 0;
+    }
+    .mob-padded {
+      padding: 5%;
+    }
+    
+    .latest-news .card {
+      margin: 0.2rem;
+      margin-bottom: 5%;
+    }
+    
+     .latest-news .card:first-child {
+      margin-left: 1.5rem;
+    }
+      .latest-news .card:last-child {
+      margin-right: 1.5rem;
+    }
+  
+  }

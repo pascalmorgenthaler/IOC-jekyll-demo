@@ -1,7 +1,81 @@
 ---
 layout: default
 title: Homepage
+fruit:
+ - title: Apple
+   description: The best fruit
+ - title: Banana
+   description: The second best fruit
+ - title: Pineapple
+   description: The third best fruit
+ - title: Peer
+   description: The fourth best fruit
+news:
+ - title: Lion King
+   description: Exciting things are happening
+   date: 13th Jan
+   category: promo
+   url: https://www.sale.com
+   - title: New Puppy
+   description: dreaming woof 
+   date: 23th Jun
+   category: puppys
+   url: https://www.sale.com
+   - title: cats and dogs
+   description: everything is happeing
+   date: 13th Dec
+   category: yes lawd
+   url: https://www.sale.com  
 ---
+
 <h1>Welcome to your homepage!</h1>
 
-<section> This is a page section only on the home page </section>
+<section> 
+
+    {% for item in page.fruit %}
+    <div class="card">
+        <h2> {{item.title}} </h2>
+        <p> {{item.description}}</p>
+    </div>
+    {% endfor %}
+
+    <!---
+    <div class="card">
+        <h2> Apple </h2>
+        <p> the best fruit</p>
+    </div>
+    <div class="card">
+        <h2> Pineapple </h2>
+        <p> the second best fruit</p>
+    </div>
+    <div class="card">
+        <h2> Banana </h2>
+        <p> the third best fruit</p>
+    </div>
+    <div class="card">
+        <h2> Peer </h2>
+        <p> the fourth best fruit</p>
+    </div>
+
+    --->
+</section>
+
+
+<section class="grid-spaceBetween padded mob-padded-0 bg-featured latest-news">  
+    
+{% for item in page.news %}
+   <!------- First Card ------------->
+    <div class="col-4_xs-7 card"> 
+      <div class="bg-image"> 
+        <span> {{item.category}} </span>
+       </div>
+      <div class="post-info">
+        <p class="date"> {{item.date}} </p>
+        <h3> {{item.title}} </h3>
+        <p> {{item.description}} </p>
+        <a href="{{item.url}}"> Find out more <!-- Space --> &nbsp; <!-- arrow --> &#10141; </a>  
+    </div>
+  </div>
+  {% endfor %}  
+      
+  </section>
